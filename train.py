@@ -8,9 +8,9 @@ from sklearn import preprocessing
 from sklearn.metrics import roc_curve
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import confusion_matrix
-from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import cross_val_predict
+from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 
 
 df = pd.read_csv("data_processed.csv")
@@ -30,7 +30,7 @@ X = imp.transform(X)
 
 
 # Linear model
-clf = LogisticRegression()
+clf = QuadraticDiscriminantAnalysis()
 yhat = cross_val_predict(clf, X, y, cv=5)
 
 acc = np.mean(yhat==y)
