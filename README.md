@@ -97,3 +97,15 @@ Modeling Swiss farmer's attitudes about climate change
     git commit -m "Make CML workflow"
     git push
     ```
+
+## Result 
+| Path         | Metrics     | LogisticRegression | QuadraticDiscriminantAnalysis | Change   |
+|--------------|-------------|--------------------|-------------------------------|----------|
+| metrics.json | accuracy    | 0.86667            | 0.70476                       | -0.1619  |
+| metrics.json | sensitivity | 0.95506            | 0.78652                       | -0.16854 |
+| metrics.json | specificity | 0.375              | 0.25                          | -0.125   |
+
+## Plot
+### LogisticRegression
+
+### QuadraticDiscriminantAnalysis
