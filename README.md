@@ -97,4 +97,3 @@ Modeling Swiss farmer's attitudes about climate change
     git commit -m "Make CML workflow"
     git push
     ```
-    
