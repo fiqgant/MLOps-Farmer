@@ -7,22 +7,26 @@ Modeling Swiss farmer's attitudes about climate change
     ``` bash
     python get_data.py
     ```
+    ![](https://raw.githubusercontent.com/fiqgant/MLOps-Farmer/main/Images/get_data.png)
 
 2. Process data with python
     ``` bash
     python process_data.py
     ```
+    ![](https://raw.githubusercontent.com/fiqgant/MLOps-Farmer/main/Images/process_data.png)
 
 3. Train
     ``` bash
     python train.py
     ```
+    ![](https://raw.githubusercontent.com/fiqgant/MLOps-Farmer/main/Images/train_result.png)
 
 4. Build Pipeline
     ``` bash
     dvc init
     dvc run -n get_data -d get_data.py -o data_raw.csv --no-exec python get_data.py
     ```
+    ![](https://raw.githubusercontent.com/fiqgant/MLOps-Farmer/main/Images/dvc_run.png)
 
     Edit `dvc.yaml`
     ``` yaml:dvc.yaml
@@ -58,6 +62,7 @@ Modeling Swiss farmer's attitudes about climate change
     ``` bash
     dvc repro
     ```
+    ![](https://raw.githubusercontent.com/fiqgant/MLOps-Farmer/main/Images/dvc_repro.png)
 
     git add, commit & push
     ```bash
@@ -99,6 +104,7 @@ Modeling Swiss farmer's attitudes about climate change
     ```
 
 ## Result 
+You can see [here](https://github.com/fiqgant/MLOps-Farmer/commit/e217475ec059857fbad059f81d8d62b1d5353739#commitcomment-81294769)
 | Path         | Metrics     | LogisticRegression | QuadraticDiscriminantAnalysis | Change   |
 |--------------|-------------|--------------------|-------------------------------|----------|
 | metrics.json | accuracy    | 0.86667            | 0.70476                       | -0.1619  |
@@ -107,5 +113,6 @@ Modeling Swiss farmer's attitudes about climate change
 
 ## Plot
 ### LogisticRegression
-
+![](https://raw.githubusercontent.com/fiqgant/MLOps-Farmer/main/by_region_lr.png)
 ### QuadraticDiscriminantAnalysis
+![](https://raw.githubusercontent.com/fiqgant/MLOps-Farmer/main/by_region_qda.png)
