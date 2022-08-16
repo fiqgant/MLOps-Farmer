@@ -1,6 +1,3 @@
 /config.local
 /tmp
 /cache
-
-data_processed.csv
-data_raw.csv
